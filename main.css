@@ -1,0 +1,206 @@
+/*****
+MAIN
+*****/
+
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+
+@font-face {
+  font-family: ITC Avant Garde Gothic Condensed;
+  src: url('ITC%20Avant%20Garde%20Gothic%20Book%20Condensed.otf');
+  font-weight: bold;
+}
+
+body,
+html {
+  background: #000;
+  color: #fff;
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  margin: 0 auto -4em;
+}
+
+footer,
+.push {
+  height: 4em;
+}
+
+
+
+/*****
+HEADING
+*****/
+
+.title {
+  text-align: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+img {
+  padding-top: 20px;
+}
+
+h1 {
+  display: inline-block;
+  font-family: ITC Avant Garde Bold Condensed, sans-serif;
+  font-size: 3em;
+  height: inherit;
+  padding-bottom: 27px;
+  vertical-align: text-bottom;
+}
+
+
+
+/*****
+LYRIC GENERATOR
+*****/
+
+.lyric {
+  max-width: 90%;
+  margin-top: 80px;
+}
+
+.lyric-container {
+  height: 200px;
+}
+
+#random-lyric {
+  font-family: 'Rock Salt', sans-serif;
+  font-size: 1.5em;
+}
+
+.lyric,
+p,
+i,
+p[class="note"] {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+i {
+  font-size: .8em;
+}
+
+button {
+  display: block;
+  font-family: ITC Avant Garde Bold Condensed, sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 10px 15px;
+  margin: 20px auto;
+  color: #fff;
+  background-color: #f84070;
+  background: -webkit-linear-gradient(#f80838, #f84070);
+  background: linear-gradient(#f80838, #f84070);
+  border: 0 none;
+  border-radius: 3px;
+  text-shadow: 0 -1px 0 #000;
+  box-shadow: 0 1px 0 #f81951, 0 5px 0 #f82959, 0 8px 15px 5px rgba(248, 36, 84, 0.8);
+  cursor: pointer;
+  -webkit-transition: all 150ms ease;
+  transition: all 150ms ease;
+}
+
+button:hover {
+  -webkit-animation: pulsate 1.2s linear infinite;
+  animation: pulsate 1.2s linear infinite;
+}
+
+@-webkit-keyframes pulsate {
+  0% {
+    color: #ddd;
+    text-shadow: 0 -1px 0 #000;
+  }
+  
+  50% {
+    color: #fff; text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff;
+  }
+  
+  100% {
+    color: #ddd;
+    text-shadow: 0 -1px - #000;
+  }
+}
+
+button:active {
+  color: #fff;
+  text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff;
+  box-shadow: 0 1px 0 #f81951, 0 2px 0 #f82959, 0 4px 5px 2px rgba(248,36,84,0.9);
+  -webkit-transform: translateY(3px);
+  transform: translateY(3px);
+  -webkit-animation: none;
+  animation: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.note,
+footer > p {
+  font-size: .9em;
+}
+
+
+
+/*****
+FOOTER
+*****/
+
+footer {
+  max-width: 80%;
+  border-top: 3px solid slategrey;
+}
+
+footer p {
+  margin-top: 10px;
+}
+
+
+
+/*****
+MEDIA QUERIES
+*****/
+
+@media screen and (max-width: 600px) {
+  
+  /*****
+  HEADING
+  *****/
+  
+  img {
+    padding-top: 5px;
+    max-height: 80px;
+  }
+  
+  h1 {
+    font-size: 2em;
+    padding-bottom: 0;
+  }
+  
+  
+  
+  /*****
+  LYRIC GENERATOR
+  *****/
+  
+  .lyric {
+    margin-top: 10px;
+  }
+  
+  .lyric-container {
+    height: 150px;
+  }
+  
+  #random-lyric {
+    font-size: 0.8em;
+  }
+}
+
+
